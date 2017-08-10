@@ -6,9 +6,9 @@ var app = express();
 app.use(morgan('combined'));
 
 var articleOne = {
-    title: "Article One - Siva",
-    heading: "Article One",
-    date: "Aug 10, 2017"
+    title: 'Article One - Siva',
+    heading: 'Article One',
+    date: 'Aug 10, 2017',
     content: `
             <p>
                 This is the sample content for first article. This is the sample content for first article. This is the sample content for first article.
@@ -25,7 +25,7 @@ var articleOne = {
                 This is the sample content for first article. This is the sample content for first article. This is the sample content for first article.
                 This is the sample content for first article. This is the sample content for first article. This is the sample content for first article.
             </p>`
-}
+};
 
 function createTemplate(data){
 var title = data.title;
@@ -66,7 +66,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one.html', function (req, res) {
-  res.send(createTemplate(articleOne)));
+  res.send(createTemplate(articleOne));
 });
 
 app.get('/article-two.html', function (req, res) {
