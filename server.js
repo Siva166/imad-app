@@ -121,7 +121,7 @@ app.get('/create-user', function(req,res){
     //var password = req.body.passord;
 
     var username = req.params.username;
-    var password = req.params.passord;
+    var password = req.params.password;
     req.contentType = 'application/json';
     var salt = crypto.randomBytes(128).toString('hex');
     var dbString = hash(password, salt);
